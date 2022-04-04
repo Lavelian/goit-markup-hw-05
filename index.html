@@ -29,9 +29,7 @@
         <nav class="nav">
           <ul class="main-nav list">
             <li class="nav-item">
-              <a href="index.html" class="main-nav-link link">
-                <span class="color-studio">Студия</span></a
-              >
+              <a href="index.html" class="main-nav-link current link">Студия</a>
             </li>
             <li class="nav-item">
               <a href="./portfolio.html" class="main-nav-link link"> Портфолио</a>
@@ -67,7 +65,7 @@
       <section class="hero hero-section">
         <div class="container-hero">
           <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-          <button type="button" class="hero-btn">Заказать услугу</button>
+          <button data-modal-open type="button" class="hero-btn">Заказать услугу</button>
         </div>
       </section>
       <!-- наши цености -->
@@ -125,12 +123,23 @@
         <div class="container">
           <h2>Чем мы занимаемся</h2>
           <ul class="about-lists list">
-            <li class="about-list"><img src="Images/img.jpg" alt="Разработка ПО" width="370" /></li>
             <li class="about-list">
-              <img src="Images/box2.jpg" alt="Разработка мобильного ПО" width="370" />
+              <div class="about-thumb">
+                <img src="Images/img.jpg" alt="Разработка ПО" width="370" />
+                <p class="about-paragraph">Десктопные приложения</p>
+              </div>
             </li>
             <li class="about-list">
-              <img src="Images/box3.jpg" alt="Разработка графических приложений" width="370" />
+              <div class="about-thumb">
+                <img src="Images/box2.jpg" alt="Разработка мобильного ПО" width="370" />
+                <p class="about-paragraph">Мобильные приложения</p>
+              </div>
+            </li>
+            <li class="about-list">
+              <div class="about-thumb">
+                <img src="Images/box3.jpg" alt="Разработка графических приложений" width="370" />
+                <p class="about-paragraph">Дизайнерские решения</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -399,5 +408,15 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button data-modal-close type="button" class="modal-close-button">
+          <svg class="close-icon" width="18" height="18">
+            <use href="./Images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
