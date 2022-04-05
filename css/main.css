@@ -396,11 +396,12 @@ bottom: 0;
   background-color: #fff;
   border-radius: 50%;
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1)  ;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1)  ;
 }
 
 .socials-icon {
   fill: #afb1b8;
+  transition:fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .socials-link:hover,
@@ -495,6 +496,7 @@ bottom: 0;
   line-height: 1.71;
   color: rgba(255, 255, 255, 0.6);
   font-style: normal;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); ;
   
 }
 .footer-address-item {
@@ -563,7 +565,8 @@ bottom: 0;
    height: 100%;
    background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1)
+  visibility: visible;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
  }
  .modal{
   position: absolute;
@@ -579,11 +582,12 @@ bottom: 0;
   border-radius: 4px;
   padding: 15px;
   
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
  }
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
+visibility: hidden;
 
 }
 .backdrop.is-hidden.modal{
@@ -689,7 +693,8 @@ padding: 63px 24px;
 color: var(--color-hero);
 transition: translate 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.work-article:hover .overlay-card {
+.work-article:hover .overlay-card,
+.work-article:focus .overlay-card{
   transform: translateY(0);
 }
 .works {
